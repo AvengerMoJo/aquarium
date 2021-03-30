@@ -29,7 +29,8 @@ options:
   -h | --help               This message.
 
 allowed image types:
-  vagrant                   Builds a vagrant image
+  vagrant                   Builds a vagrant libvirt image 
+  vagrant-virtualbox        Builds a vagrant virtualbox image
   self-install              Builds an image to be run on bare metal.
   live-iso		    Builds an live iso with persistent storage on bare metal.
 EOF
@@ -97,6 +98,7 @@ done
 profile=""
 case ${imgtype} in
   vagrant) profile="Ceph-Vagrant" type="oem";;
+  vagrant-virtualbox) profile="Ceph-Vagrant-VirtualBox" type="oem";;
   self-install) profile="Ceph" type="oem";;
   live-iso) profile="Ceph" type="iso";;
   *)
@@ -176,10 +178,13 @@ bundle() {
     ./gravel/ceph.git/src/cephadm/cephadm || exit 1
   popd
 
-  cp ${rootdir}/systemd/aquarium.service ${bundle_unit} || exit 1
+  cp -r ${imgdir}/microOS/root/* ${bundledir} || exit 1
 
   pushd ${build}
-  tar -C ${bundledir} usr -cf aquarium.tar || exit 1
+  sudo chown root.root -R ${bundledir}
+  tar -C ${bundledir} etc usr -cf aquarium.tar || exit 1
+  sudo chown root.root -R ${imgdir}/microOS/aquarium_root
+  tar -C ${imgdir}/microOS/aquarium_root etc -cf aquarium_user.tar || exit 1
   popd
 }
 
