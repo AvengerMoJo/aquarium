@@ -22,12 +22,6 @@
         </profile>
         <profile name="SelfInstall" description="Self Installing Image" arch="x86_64"/>
         <!-- Images (flavor + platform) -->
-	<!--
-        <profile name="ContainerHost-Vagrant" description="MicroOS with Podman for Vagrant" arch="x86_64">
-            <requires profile="Vagrant-x86_64"/>
-            <requires profile="ContainerHost"/>
-        </profile>
-	-->
         <profile name="Vagrant-VirtualBox" description="MicroOS with Podman for Vagrant" arch="x86_64">
             <requires profile="Vagrant-VirtualBox-x86_64"/>
         </profile>
@@ -60,7 +54,7 @@
     <preferences profiles="Vagrant-x86_64">
         <type
             image="oem"
-            filesystem="ext4"
+            filesystem="xfs"
             format="vagrant"
             bootloader="grub2"
             bootloader_console="gfxterm"
@@ -77,12 +71,12 @@
     <preferences profiles="Vagrant-VirtualBox-x86_64">
         <type
             image="oem"
-            filesystem="ext4"
+            filesystem="xfs"
             format="vagrant"
             bootloader="grub2"
             bootloader_console="gfxterm"
             firmware="uefi"
-            kernelcmdline="quiet systemd.show_status=yes console=ttyS0,115200 console=tty0 net.ifnames=0 \$ignition_firstboot ignition.platform.id=metal root=/dev/vda1 disk=/dev/vda"
+            kernelcmdline="quiet systemd.show_status=yes console=ttyS0,115200 console=tty0 net.ifnames=0 \$ignition_firstboot ignition.platform.id=metal root=/dev/sda3 disk=/dev/sda"
             bootpartition="false"
             bootkernel="custom"
             devicepersistency="by-uuid"
@@ -94,7 +88,7 @@
     <preferences profiles="SelfInstall">
         <type
             image="oem"
-            filesystem="ext4"
+            filesystem="xfs"
             bootloader="grub2"
             bootloader_console="gfxterm"
             firmware="uefi"
@@ -118,14 +112,12 @@
             image="iso"
             primary="true"
             flags="overlay"
-            hybridpersistent_filesystem="ext4"
+            hybridpersistent_filesystem="xfs"
             hybridpersistent="true"
             kernelcmdline="quiet systemd.show_status=yes console=ttyS0,115200 console=tty0"
             devicepersistency="by-uuid"/>
     </preferences>
     <users>
-         <user password="suse1234" home="/root" name="root" groups="root" pwdformat="plain"/>
-	 <user password="vagrant" home="/home/vagrant" name="vagrant" groups="vagrant" pwdformat="plain"/>
          <user password="aquarium" home="/home/aquarium" name="aquarium" groups="aquarium"  pwdformat="plain"/>
     </users>
 
@@ -202,5 +194,7 @@
 	<!-- container for ceph to run on -->
         <namedCollection name="container_runtime"/>
         <package name="patterns-containers-container_runtime"/>
+	<!-- AppArmor pattern -->
+        <namedCollection name="apparmor"/>
     </packages>
 </image>
