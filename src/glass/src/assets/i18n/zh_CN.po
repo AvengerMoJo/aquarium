@@ -1,124 +1,124 @@
 # 
 # Translators:
-# Volker <votdev@gmx.de>, 2021
+# AvengerMoJo Alex <avengermojo@gmail.com>, 2021
 # 
 msgid ""
 msgstr ""
-"Last-Translator: Volker <votdev@gmx.de>, 2021\n"
-"Language-Team: German (Germany) (https://www.transifex.com/aquarist-labs/teams/117625/de_DE/)\n"
+"Last-Translator: AvengerMoJo Alex <avengermojo@gmail.com>, 2021\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/aquarist-labs/teams/117625/zh_CN/)\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: de_DE\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
 "mime-version: 1.0\n"
 
 msgid "15min"
-msgstr ""
+msgstr "15分钟"
 
 msgid "1min"
-msgstr ""
+msgstr "1分钟"
 
 msgid "5min"
-msgstr ""
+msgstr "5分钟"
 
 msgid "Aquarium"
 msgstr "Aquarium"
 
 msgid "Architecture"
-msgstr ""
+msgstr "构架"
 
 msgid "Assigned"
-msgstr "Zugewiesen"
+msgstr "已分配"
 
 msgid "Available"
-msgstr "Verfügbar"
+msgstr "可用的"
 
 msgid "Back"
-msgstr "Zurück"
+msgstr "退回"
 
 msgid "Bootstrap system"
-msgstr ""
+msgstr "引导系统"
 
 msgid "CPU Load"
-msgstr ""
+msgstr "CPU负载"
 
 msgid "Cancel"
-msgstr "Abbruch"
+msgstr "取消"
 
 msgid "Capacity"
-msgstr "Kapazität"
+msgstr "容量"
 
 msgid "CephFS"
-msgstr ""
+msgstr "CephFS"
 
 msgid "Choose installation mode"
-msgstr ""
+msgstr "选择安装方式"
 
 msgid "Choose selected devices"
-msgstr ""
+msgstr "选择设备"
 
 msgid "Configure CephFS service"
-msgstr ""
+msgstr "配置CephFS服务"
 
 msgid "Configure NFS service"
-msgstr ""
+msgstr "配置NFS服务"
 
 msgid "Configure iSCSI service"
-msgstr ""
+msgstr "配置iSCSI服务"
 
 msgid "Continue"
-msgstr "Fortsetzen"
+msgstr "继续"
 
 msgid "Create"
-msgstr "Erstellen"
+msgstr "创建"
 
 msgid "Create new cluster"
-msgstr ""
+msgstr "创建新集群"
 
 msgid "Dashboard"
-msgstr "Dashboard"
+msgstr "仪表板"
 
 msgid "Deploy a service"
-msgstr ""
+msgstr "部署服务"
 
 msgid "Failed to bootstrap the system."
-msgstr ""
+msgstr "无法引导系统。"
 
 msgid "Failed to fetch data"
-msgstr ""
+msgstr "无法获取数据"
 
 msgid "Failed to fetch device information"
-msgstr ""
+msgstr "无法获取设备信息"
 
 msgid "Failed to start bootstrapping the system."
-msgstr ""
+msgstr "无法启动引导系统。"
 
 msgid "Failed to start device deployment."
-msgstr ""
+msgstr "无法启动设备部署。"
 
 msgid "Free"
-msgstr "Frei"
+msgstr "空闲"
 
 msgid "Go to Dashboard"
-msgstr ""
+msgstr "前往仪表板"
 
 msgid "Health"
-msgstr ""
+msgstr "健康状况"
 
 msgid "Hostname"
-msgstr "Hostname"
+msgstr "主机名"
 
 msgid "Hosts"
-msgstr ""
+msgstr "主机"
 
 msgid "Join existing cluster"
-msgstr "Einem vorhandenen Cluster beitreten"
+msgstr "加入现有集群"
 
 msgid "Kernel"
-msgstr "Kernel"
+msgstr "内核"
 
 msgid "Language"
-msgstr "Sprache"
+msgstr "语言"
 
 msgid ""
 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin porttitor "
@@ -129,118 +129,120 @@ msgid ""
 msgstr ""
 
 msgid "Name"
-msgstr "Name"
+msgstr "名称"
 
 msgid "Next"
-msgstr ""
+msgstr "下一个"
 
 msgid "No"
-msgstr "Nein"
+msgstr "不對"
 
 msgid "No CephFS services configured"
-msgstr ""
+msgstr "未配置CephFS服务"
 
 msgid "OK"
-msgstr "OK"
+msgstr "好的"
 
 msgid "Operating System"
-msgstr ""
+msgstr "操作系统"
 
 msgid "Path"
-msgstr "Pfad"
+msgstr "路径"
 
 msgid "Please wait, bootstrapping in progress ..."
-msgstr ""
+msgstr "请稍候，正在引导中..."
 
 msgid "Please wait, bootstrapping will be started ..."
-msgstr ""
+msgstr "请稍候，引导程序将开始..."
 
 msgid "Please wait, device deployment in progress ..."
-msgstr ""
+msgstr "请稍候，正在进行设备部署..."
 
 msgid "Please wait, fetching device information ..."
-msgstr ""
+msgstr "正在获取设备信息，请稍候..."
 
 msgid "Redundancy Level"
-msgstr ""
+msgstr "冗余度"
 
 msgid "Serial"
-msgstr ""
+msgstr "序列"
 
 msgid "Services"
-msgstr "Dienste"
+msgstr "服务"
 
 msgid ""
 "Setup will create a new deployment from scratch, configuring this node as a "
 "standalone storage solution."
-msgstr ""
+msgstr "安装程序将从头开始创建新的部署，并将此节点配置为独立存储解决方案。"
 
 msgid ""
 "Setup will search for existing deployments in the network and be "
 "assimilated."
-msgstr ""
+msgstr "安装程序将搜索网络中的现有部署并将其吸收。"
 
 msgid "Size"
-msgstr ""
+msgstr "大小"
 
 msgid "Sorry, we could not find what you are looking for."
-msgstr ""
+msgstr "抱歉，我们找不到您想要的东西。"
 
 msgid "Space"
-msgstr ""
+msgstr "空间"
 
 msgid "Start"
-msgstr "Start"
+msgstr "开始"
 
 msgid "System Information"
-msgstr ""
+msgstr "系统信息"
 
 msgid ""
 "The step will erase all data on the listed devices. Are you sure you want to"
 " continue?"
-msgstr ""
+msgstr "该步骤将擦除列出设备上的所有数据。 你确定你要继续吗？"
 
 msgid "Toggle navigation"
-msgstr ""
+msgstr "切换导航"
 
 msgid "Type"
-msgstr "Typ"
+msgstr "类型"
 
 msgid "Unassigned"
-msgstr ""
+msgstr "未分配"
 
 msgid "Uptime"
-msgstr "Betriebszeit"
+msgstr "运行时间"
 
 msgid "Used"
-msgstr "Benutzt"
+msgstr "使用中"
 
 msgid "Vendor"
-msgstr ""
+msgstr "供应商"
 
 msgid "Volumes"
-msgstr ""
+msgstr "卷数"
 
 msgid "We are sorry, but your deployment was not successful."
-msgstr ""
+msgstr "很抱歉，您的部署未成功。"
 
 msgid ""
 "Welcome to Aquarium - Our take on an opinionated storage appliance. To get "
 "started on your first deployment, click below. We are in the initial phases "
 "of development and welcome feature and bug reports. See our"
 msgstr ""
+"欢迎来到Aquarium－我们是一套有想法的专用存储设备。 准备开始您的第一次部署，请点击下面的按钮。 "
+"我们正处于开发的初始阶段，欢迎建议功能和提供错误报告。 看我们的"
 
 msgid "Yes"
-msgstr "Ja"
+msgstr "对"
 
 msgid "You can now open your dashboard by clicking the button below."
-msgstr ""
+msgstr "现在，您可以通过点击下面的按钮来打开仪表板。"
 
 msgid "Your deployment was successful and is now ready to use."
-msgstr ""
+msgstr "您的部署已成功，现在可以使用了。"
 
 msgid "for more details."
-msgstr "für mehr Details."
+msgstr "更多细节。"
 
 msgid "iSCSI"
 msgstr "iSCSI"

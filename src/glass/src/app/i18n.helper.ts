@@ -37,6 +37,8 @@ export const supportedLanguages: Record<string, string> = {
   /* eslint-disable @typescript-eslint/naming-convention */
   en_US: 'English',
   de_DE: 'Deutsch'
+  zh_TW: 'Chinese(Traditional)'
+  zh_CN: 'Chinese(Simplified)'
 };
 
 /**
