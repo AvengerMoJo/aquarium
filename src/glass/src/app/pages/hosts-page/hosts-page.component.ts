@@ -7,6 +7,9 @@ import { NodesService, TokenReply } from '~/app/shared/services/api/nodes.servic
 import { Host, OrchService } from '~/app/shared/services/api/orch.service';
 import { DialogService } from '~/app/shared/services/dialog.service';
 
+import { LocalStorageService } from '~/app/shared/services/local-storage.service';
+
+
 @Component({
   selector: 'glass-hosts-page',
   templateUrl: './hosts-page.component.html',
@@ -21,7 +24,8 @@ export class HostsPageComponent {
   constructor(
     private dialogService: DialogService,
     private nodesService: NodesService,
-    private orchService: OrchService
+    private orchService: OrchService,
+    private localStorageService: LocalStorageService
   ) {
     this.columns = [
       {
@@ -35,6 +39,7 @@ export class HostsPageComponent {
         sortable: true
       }
     ];
+    this.loadSettings();
   }
 
   loadData(): void {
@@ -69,5 +74,26 @@ export class HostsPageComponent {
         }
       });
     });
+  }
+  loadSettings(): void {
+    const value = this.localStorageService.get('harddrive_widgets');
+    if (_.isString(value)) {
+      this.gridsterItems = JSON.parse(value);
+    }
+    // If no widgets are configured, then show the default ones.
+    if (!this.gridsterItems.length) {
+      _.forEach( _.filter(this.widgets, ['enabledByDefault', true]),
+        (widget: DashboardWidgetConfig) => {
+	// Add ALL widgets with position (0,0), the grid will rearrange
+	// them automatically.
+	this.gridsterItems.push({
+	  cols: widget.cols,
+	  rows: widget.rows,
+	  x: 0,
+	  y: 0,
+	  type: widget.id
+	});
+      });
+    }
   }
 }
